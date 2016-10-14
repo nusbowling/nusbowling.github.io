@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>teamNUS Bowling</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u' crossorigin='anonymous'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js' integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa' crossorigin='anonymous'></script>
+
+  </head>
+
+  <body>
+    <div class='container'>
+
+      <img src='https://nusinvitationalshoot.files.wordpress.com/2015/02/teamnus.png' class='img-responsive'>
+
+      <div class='form-group'>
+        <label for='select_no_of_lanes'>Select Number of Lanes:</label>
+        <select class='form-control' id='select_no_of_lanes'>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+          <option>6</option>
+          <option>7</option>
+          <option selected="selected">8</option>
+          <option>9</option>
+          <option>10</option>
+          <option>11</option>
+          <option>12</option>
+        </select>
+      </div>
+
+      <div class='row'>
+        <button type='button' class='btn btn-primary edit_modal_btn' data-toggle='modal' data-target='#edit_modal'>Edit List</button>
+        <button type='button' class='btn btn-danger help_modal_btn' data-toggle='modal' data-target='#help_modal'>Help</button>
+      </div>
+
+      <div class='well bowlers_list'>
+        <button type="button" class="btn btn-info btn-xs select_all" value="false">Select All</button>
+      </div>
+
+      <form role='form' id='add_bowler'>
+        <input type='text' class='form-control' placeholder='Add a bowler...'>
+      </form>
+
+      <div class='row'>
+        <button class='btn btn-primary' id='randomise' onClick='randomise()' disabled>Randomise!</button>
+      </div>
+
+      <hr>
+
+      <div class='allocation_table'></div>
+
+    </div>
+
+    <!-- Edit Modal -->
+    <div class='modal fade' id='edit_modal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+      <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+            <h4 class='modal-title' id='myModalLabel'>Edit Existing Bowlers</h4>
+          </div>
+          <div class='modal-body'>
+            <table class='table table-striped'>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody class='edit_table_body'></tbody>
+            </table>
+          </div>
+          <div class='modal-footer'>
+            <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+            <button type='button' class='btn btn-primary modal_save'>Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class='modal fade' id='help_modal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+      <div class='modal-dialog' role='document'>
+        <div class='modal-content'>
+          <div class='modal-header'>
+            <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+            <h4 class='modal-title' id='myModalLabel'>Welcome! Things to note!</h4>
+          </div>
+          <div class='modal-body'>
+            <ul>
+              <li>Data is stored locally on your browser, so please <strong>do not use</strong> this app in <u>Private Browsing</u> mode.</li>
+              <li>Once a bowler name is added, it is automatically saved.</li>
+              <li>You can rename or delete a bowler name from the Edit List popup.</li>
+              <li>Before randomising, make sure that <u>the number of bowlers</u> <strong>≥</strong> <u>the number of lanes</u>.</li>
+              <li>Enjoy! Contributions by Eugene Lim & Tay Shuan Siang.</li>
+            </ul>
+          </div>
+          <div class='modal-footer'>
+            <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src='scripts.js'></script>
+
+  </body>
+
+</html>
