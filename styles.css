@@ -1,0 +1,47 @@
+.img-responsive {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group, .edit_modal_btn, .help_modal_btn, .bowlers_list, #add_bowler {
+  margin-bottom: 20px;
+}
+
+.row {
+  text-align: center;
+}
+
+#edit_modal table {
+  table-layout: fixed;
+}
+
+#edit_modal td:first-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#edit_modal th:first-child {
+  width: 50%;
+}
+
+#edit_modal th:not(:first-child) {
+  width: 25%;
+}
+
+.checkbox {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 15px;
+}
+
+.allocation_table table {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.allocation_table thead {
+  background-color: #e8873d;
+}
